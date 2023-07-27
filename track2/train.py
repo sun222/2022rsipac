@@ -146,7 +146,7 @@ if __name__ == '__main__':
         
     train_loader = get_dataloader(image_A_paths, image_B_paths,
                                   label_paths, "train", batch_size,
-                                  shuffle=True, num_workers=8)
+                                  shuffle=True, num_workers=2)
     
     model_path = "Unet_resnet50a_dropout5.pth"
     # model_path = "../model/Unet_mobilenetv2.pth"
@@ -200,7 +200,7 @@ if __name__ == '__main__':
         
     train_loader = get_dataloader(image_A_paths, image_B_paths,
                                   label_paths, "train", batch_size,
-                                  shuffle=True, num_workers=8)
+                                  shuffle=True, num_workers=2)
     
     model_path = "Unet_resnet34a_dropout5.pth"
     # model_path = "../model/Unet_mobilenetv2.pth"
