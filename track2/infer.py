@@ -376,8 +376,8 @@ if __name__ == "__main__":
     output_dir = "/output"
     if not os.path.exists(output_dir):os.makedirs(output_dir)
     
-    image_A_paths = glob.glob('/test/A/*.tif')
-    image_B_paths = glob.glob('/test/B/*.tif')
+    image_A_paths = glob.glob('/kaggle/input/cd2023/testA/testA/A/*.tif')
+    image_B_paths = glob.glob('/kaggle/input/cd2023/testA/testA/B/*.tif')
     
     
     batch_size = 1
