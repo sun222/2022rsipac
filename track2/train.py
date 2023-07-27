@@ -136,7 +136,7 @@ if __name__ == '__main__':
     
     loss_fn = edgeBCE_Dice_loss
     
-    image_A_paths = sorted(glob.glob("/data/train_chusai/A/*.tif"))
+    image_A_paths = sorted(glob.glob("/kaggle/input/cd2023/train_with_seg/train_with_seg/train/A/*.tif"))
     image_B_paths, label_paths = [],[]
     for image_A_path in image_A_paths:
         image_B_path = image_A_path.replace("A","B")
@@ -190,7 +190,7 @@ if __name__ == '__main__':
     
     loss_fn = edgeBCE_Dice_loss
     
-    image_A_paths = sorted(glob.glob("/data/train_chusai/A/*.tif"))
+    image_A_paths = sorted(glob.glob("/kaggle/input/cd2023/train_with_seg/train_with_seg/train/A/*.tif"))
     image_B_paths, label_paths = [],[]
     for image_A_path in image_A_paths:
         image_B_path = image_A_path.replace("A","B")
