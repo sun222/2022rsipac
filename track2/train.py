@@ -101,7 +101,7 @@ if __name__ == '__main__':
     seed_it(seed)
     
     epoches = 45
-    batch_size = 8
+    batch_size = 4
     
     channels = 6
     
