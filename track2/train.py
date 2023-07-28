@@ -99,11 +99,11 @@ def train(epoches, batch_size, train_loader, model, optimizer, scheduler,
 # 不加主函数这句话的话,Dataloader多线程加载数据会报错
 if __name__ == '__main__':
     
-    seed = 45
+    seed = 36
     seed_it(seed)
     
     epoches = 45
-    batch_size = 2
+    batch_size = 4
     
     channels = 6
     
