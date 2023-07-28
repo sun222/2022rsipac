@@ -86,10 +86,8 @@ def train(epoches, batch_size, train_loader, model, optimizer, scheduler,
         
         scheduler.step(epoch-1)
 
-        if epoch%2==0:
-             print("epoch save!")
-            
-            
+        if epoch % 2 == 0:
+            print("epoch save!")
             torch.save(model.state_dict(), model_path.replace(".pth",f"_{epoch}.pth"))
         
         # 输出进程
@@ -103,8 +101,8 @@ if __name__ == '__main__':
     seed = 36
     seed_it(seed)
     
-    epoches = 45
-    batch_size = 4
+    epoches = 30
+    batch_size = 2
     
     channels = 6
     
