@@ -333,9 +333,9 @@ if __name__ == "__main__":
     
     in_channels = 6
     classes = 1
-    model_34 = Res_Unet(in_channels = in_channels, 
+    model_18 = Res_Unet(in_channels = in_channels, 
                       n_classes = classes, 
-                      backbone = "resnet34_ibn_a",
+                      backbone = "resnet18_ibn_a",
                       model_path = None,
                       dropout_rate = 0.5,
                       scse = True, 
@@ -354,15 +354,15 @@ if __name__ == "__main__":
                       hypercolumn=False)
     
     # models = [model_34, model_50, model_34, model_50, model_34, model_50, model_34, model_50, model_34, model_50]
-    models = [model_34, model_50, model_34, model_50, model_34, model_50]
+    models = [model_18, model_18, model_18, model_18, model_18, model_18]
     
     model_paths = [
-        "Unet_resnet34a_dropout5_44.pth",
-        "Unet_resnet50a_dropout5_44.pth",
-        "Unet_resnet34a_dropout5_45.pth",
-        "Unet_resnet50a_dropout5_45.pth",
-        "Unet_resnet34a_dropout5_43.pth",
-        "Unet_resnet50a_dropout5_43.pth",
+        "Unet_resnet50a_dropout5_7.pth",
+        "Unet_resnet50a_dropout5_7.pth",
+        "Unet_resnet50a_dropout5_7.pth",
+        "Unet_resnet50a_dropout5_7.pth",
+        "Unet_resnet50a_dropout5_7.pth",
+        "Unet_resnet50a_dropout5_7.pth",
         # "../model/Unet_resnet34a_dropout5_46.pth",
         # "../model/Unet_resnet50a_dropout5_46.pth",
         ]
@@ -381,7 +381,7 @@ if __name__ == "__main__":
     
     
     batch_size = 1
-    num_workers = 8
+    num_workers = 2
     test_loader = get_dataloader(image_A_paths, image_B_paths, None, "test", 
                                   test_json, batch_size, False, num_workers)
     dts = test(models, model_paths, output_dir, test_loader, batch_size)
