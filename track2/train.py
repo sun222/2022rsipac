@@ -86,7 +86,8 @@ def train(epoches, batch_size, train_loader, model, optimizer, scheduler,
         
         scheduler.step(epoch-1)
 
-        if epoch%2:
+        if epoch%2==0:
+             print("epoch save!")
             
             
             torch.save(model.state_dict(), model_path.replace(".pth",f"_{epoch}.pth"))
