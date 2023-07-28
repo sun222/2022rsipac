@@ -86,7 +86,9 @@ def train(epoches, batch_size, train_loader, model, optimizer, scheduler,
         
         scheduler.step(epoch-1)
 
-        if epoch>40:
+        if epoch%2:
+            
+            
             torch.save(model.state_dict(), model_path.replace(".pth",f"_{epoch}.pth"))
         
         # 输出进程
@@ -110,7 +112,7 @@ if __name__ == '__main__':
                       n_classes = 1, 
                       # backbone = 'resnet18_ibn_a',
                       # backbone = "resnet34_ibn_a",
-                      backbone = "resnet50_ibn_a",
+                      backbone = "resnet18_ibn_a",
                       # model_path = 'resnet18_ibn_a-2f571257.pth', 
                       # model_path = "resnet34_ibn_a-94bc1577.pth",
                       model_path = None,
